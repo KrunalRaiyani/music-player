@@ -6,7 +6,7 @@ import close from "@/../../public/close.svg"
 
 const page = () => {
     return (
-        <div className='w-11/12 m-auto mt-16 flex flex-col gap-16'>
+        <div className='w-11/12 m-auto mt-9 flex flex-col gap-16'>
             <h1 className='text-3xl font-semibold'>Create a new playlist</h1>
             <div className='flex gap-16'>
                 <div>
@@ -16,7 +16,7 @@ const page = () => {
                             <p>Drop an image here</p>
                         </div>
 
-                        <input type="file" name="file" className='h-full w-full opacity-0 z-10 cursor-pointer' onChange={(e)=>console.log(e)} />
+                        <input type="file" name="file" className='h-full w-full opacity-0 z-10 cursor-pointer' />
                     </div>
                 </div>
                 <form className='flex flex-col gap-6 flex-1'>

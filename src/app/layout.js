@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 import './globals.css'
+import logo from '@/../../public/logo.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +13,37 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#093545] text-white">{children}</body>
+      <body className="bg-[#093545] text-white">
+        <nav className="bg-gray-800 p-3 px-8">
+          <div className="container mx-auto flex justify-between items-center">
+            <div className="flex items-center gap-5">
+              <Link href="/" className="flex items-center gap-2 text-white text-2xl font-bold font-[cursive]" >
+                <img src={logo?.src} alt="logo" className='h-11' />
+                <p className='first-letter:text-red-500 text-2xl mb-1'>Music</p>
+              </Link>
+              <div className='flex items-center gap-2.5'>
+                <Link href="/" className="text-white">
+                  Home
+                </Link>
+                <Link href="/playlist" className="text-white">
+                  Playlist
+                </Link>
+                <Link href="/songs" className="text-white">
+                  Songs
+                </Link>
+                <Link href="/favorites" className="text-white">
+                  Favourite Songs
+                </Link>
+              </div>
+            </div>
+
+            {/* <button className="bg-blue-500 text-white py-2 px-4 rounded">
+              Add
+            </button> */}
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }
