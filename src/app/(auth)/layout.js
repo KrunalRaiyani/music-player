@@ -1,5 +1,6 @@
 import React from 'react'
 import design from "@/../../public/design1.svg"
+import "../globals.css"
 
 const layout = ({children}) => {
   return (

@@ -1,5 +1,6 @@
 import notfound from "@/../../public/radio.svg"
 import Link from "next/link"
+import 'tailwindcss/tailwind.css'
 
 export default function Home() {
   return (

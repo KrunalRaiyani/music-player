@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.innerCard {
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-duration: 0.25s;
+}
+.imgCard:hover .innerCard {
+  scale: 4;
+  opacity: 0.7;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

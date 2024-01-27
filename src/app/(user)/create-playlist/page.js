@@ -5,9 +5,19 @@ import download from "@/../../public/download.svg"
 import close from "@/../../public/close.svg"
 
 const page = () => {
+
+
+    let handleSubmit = (e) => {
+        e.preventDefault()
+        let newForm = new FormData(e.target)
+        let a = Object.fromEntries(newForm)
+        console.log(a)
+    }
+
+
     return (
-        <div className='w-11/12 m-auto mt-9 flex flex-col gap-16'>
-            <h1 className='text-3xl font-semibold'>Create a new playlist</h1>
+        <div className='w-11/12 m-auto mt-9 flex flex-col gap-12'>
+            <h1 className='text-xl font-semibold'>Create a new playlist</h1>
             <div className='flex gap-16'>
                 <div>
                     <div className='relative h-[26rem] w-[26rem] rounded-lg border border-dashed border-white'>
@@ -19,7 +29,7 @@ const page = () => {
                         <input type="file" name="file" className='h-full w-full opacity-0 z-10 cursor-pointer' />
                     </div>
                 </div>
-                <form className='flex flex-col gap-6 flex-1'>
+                <form className='flex flex-col gap-6 flex-1' onSubmit={handleSubmit}>
                     <input type="text" name="name" placeholder='Title' className='bg-[#224957] text-sm p-3 px-4 rounded-lg text-white' />
                     {/* <textarea name="description" placeholder='Description' className='bg-[#224957] text-sm p-3 px-4 rounded-lg text-white resize-none h-24' ></textarea> */}
                     <div className='flex flex-col gap-4 bg-[#224957] text-sm p-3 pt-4 px-4 rounded-lg text-white'>
@@ -27,26 +37,26 @@ const page = () => {
                         <div className='flex flex-col gap-3 pb-2'>
                             <div className='flex gap-2 items-center pt-3 border-t border-[#44545A]'>
                                 <img src="https://i.ytimg.com/vi/8-E1LbChJ88/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDC_3JVDk5vhJqUL1cMZeRAtocOYw" alt="thumbnail" className='rounded-md h-12' />
-                                <p className='text-[12px] h-10 overflow-hidden'>LONG DRIVE Bollywood Mix - Arijit Singh | Full Album | 2 Hour Nonstop | Apna Bana Le, Zaalima & More</p>
+                                <p className='text-[12px] line-clamp-2 overflow-hidden w-full'>LONG DRIVE Bollywood Mix - Arijit Singh | Full Album | 2 Hour Nonstop | Apna Bana Le, Zaalima & More</p>
                                 <button type="button" className='bg-[#2BD17E] text-sm rounded-lg p-3'>
                                     <img src={close?.src} alt="close" className='h-5 w-5' />
                                 </button>
                             </div>
                             <div className='flex gap-2 items-center pt-3 border-t border-[#44545A]'>
-                            <img src="https://i.ytimg.com/vi/eL2vQyP6DQE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfTBfNpzqm7HIuQyi0qANM4Rk7Bw" alt="thumbnail" className='rounded-md h-12' />
-                                <p className='text-[12px] h-10 overflow-hidden'>LONG DRIVE Bollywood Mix - Arijit Singh | Full Album | 2 Hour Nonstop | Apna Bana Le, Zaalima & More</p>
+                                <img src="https://i.ytimg.com/vi/eL2vQyP6DQE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfTBfNpzqm7HIuQyi0qANM4Rk7Bw" alt="thumbnail" className='rounded-md h-12' />
+                                <p className='text-[12px] line-clamp-2 overflow-hidden w-full'>LONG DRIVE Bollywood Mix - Arijit Singh | Full Album | 2 Hour Nonstop | Apna Bana Le, Zaalima & More</p>
                                 <button type="button" className='bg-[#2BD17E] text-sm rounded-lg p-3'>
                                     <img src={close?.src} alt="close" className='h-5 w-5' />
                                 </button>
                             </div>
                             <div className='flex gap-2 items-center pt-3 border-t border-[#44545A]'>
-                            <img src="https://i.ytimg.com/vi/niVMze3HAyY/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IC8oEzAP&rs=AOn4CLBRcNiemV9QuYoIDXNEfMd78_XDwA" alt="thumbnail" className='rounded-md h-12' />
-                                <p className='text-[12px] h-10 overflow-hidden'>LONG DRIVE Bollywood Mix - Arijit Singh | Full Album | 2 Hour Nonstop | Apna Bana Le, Zaalima & More</p>
+                                <img src="https://i.ytimg.com/vi/niVMze3HAyY/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IC8oEzAP&rs=AOn4CLBRcNiemV9QuYoIDXNEfMd78_XDwA" alt="thumbnail" className='rounded-md h-12' />
+                                <p className='text-[12px] line-clamp-2 overflow-hidden w-full'>LONG DRIVE Bollywood Mix - Arijit Singh | Full Album | 2 Hour Nonstop | Apna Bana Le, Zaalima & More</p>
                                 <button type="button" className='bg-[#2BD17E] text-sm rounded-lg p-3'>
                                     <img src={close?.src} alt="close" className='h-5 w-5' />
                                 </button>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div className='flex gap-4 items-center'>
